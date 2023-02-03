@@ -4,42 +4,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NY Times API example</title>
-    <script src="scripts/main.js" defer></script>
-    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="Assets/styles.css" rel="stylesheet">
 </head>
 <body>
-<h1>NY Times article search</h1>
+    <!-- Header with the jumbotron -->
+    <header>
+        <div class="jumbotron">
+            <h1 class="display-4"><strong>
+                <i class="fa fa-newspaper-o"></i>
+                New York Times Search
+            </strong></h1>
+        </div>
+    </header>
 
-<div class="wrapper">
+    <!-- Query form with user input -->
+    <section id="form-container">
+        <form id="search-parameter">
+            <div id="form-header"><strong>
+            </strong>
+                <i class="fa fa-list-alt"></i>
+                Search Parameters
+            </div>
+            <div class="form-group">
+              <label for="searchTerm">Search Term</label>
+              <input type="text" class="form-control" id="searchTerm" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="numberOfRecords">Number of Records To Retrieve</label>
+              <select class="custom-select" id="numberOfRecords" aria-labelledby="dropdownMenuButton">
 
-    <div class="controls">
-        <form>
-            <p>
-                <label for="search">Enter ONE search term (required): </label>
-                <input type="text" id="search" class="search" required>
-            </p>
-            <p>
-                <label for="start-date">Enter a start date (format YYYYMMDD): </label>
-                <input type="date" id="start-date" class="start-date" pattern="[0-9]{8}">
-            </p>
-            <p>
-                <label for="end-date">Enter an end date (format YYYYMMDD): </label>
-                <input type="date" id="end-date" class="end-date" pattern="[0-9]{8}">
-            </p>
-            <p>
-                <button class="submit">Submit search</button>
-            </p>
-        </form>
-    </div class="results">
-    <nav>
-      <button class=""prev>Previous 10</button>
-      <button class="next">Next 10</button>
-    </nav>
-
-    <div>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect2">Example multiple select</label>
+              <select class="form-control" id="exampleFormControlSelect2" aria-labelledby="dropdownMenuButton">
+                <option selected value="1">1</option>
+                <option value="5" selected>5</option>
+                <option value="10" selected>10</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </form>
+    </section>
 
 
-    </div>
-  
+    <script src="Assets/script.js"></script>
 </body>
 </html>
